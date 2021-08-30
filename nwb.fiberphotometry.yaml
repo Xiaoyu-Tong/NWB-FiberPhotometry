@@ -1,0 +1,85 @@
+groups:
+- neurodata_type_def: FiberPhotometrySeries
+  neurodata_type_inc: TimeSeries
+  doc: Series for fiber photometry recordings.
+  author:
+  - Xiaoyu Tong
+  datasets:
+  - name: data
+    dtype: numeric
+    dims:
+    - num_times
+    shape:
+    - null
+    doc: Fiber photometry recording
+  links:
+  - name: info
+    target_type: FiberPhotometryInfo
+    doc: Link to FiberPhotometryInfo object which is a collection of information related to the fiber photometry experiment
+- neurodata_type_def: FiberPhotometryArrayContainer
+  neurodata_type_inc: NWBDataInterface
+  groups:
+  - name: arrays
+    doc: FiberPhotometryArrayContainer object that contains FiberPhotometryArray objects
+    groups:
+    - neurodata_type_inc: FiberPhotometryArray
+      doc: Acquired, positions of sites in each array.
+      quantity: '*'
+  attributes:
+  - name: num_arrays
+    dtype: numeric
+    doc: Number of implanted fiber array(s) used in the experiment
+    required: false
+- neurodata_type_def: FiberPhotometryArray
+  neurodata_type_inc: NWBContainer
+  doc: the arrangement of optic fibers in an implanted fiber array
+  attributes:
+  - name: description
+    dtype: text
+    doc: General description of the fiber array(s), e.g. connector type and fiber type 
+    required: false
+  - name: length_info
+    dtype: logical
+    doc: Logical value specifying whether length information is available
+    required: false
+  - name: unit
+    dtype: text
+    doc: A string defining the unit of fiber length stored in matrix. e.g. mm.
+    required: false
+  - name: matrix
+    dtype: numeric
+    doc: m by n matrix specifying which sites are used for recording in an implant array, where m and n are the size of implant array.
+            if length_info = 1, a zero value means the corresponding site is
+            not used, and a non-zero value means the corresponding site
+            is used and how long the optic fiber protruded below the connector;
+            if length_info = 0, non-zero values just indicate existence of
+            sites.
+    required: false
+- neurodata_type_def: FiberPhotometryInfo
+  neurodata_type_inc: NWBContainer
+  doc: Information relevant for the fiber photometry experiment
+  attributes:
+  - name: description
+    dtype: text
+    doc: General description of the fiber photometry experiment
+    required: false
+  - name: optical_fiber
+    dtype: text
+    doc: The description of fiber (type, diameter, tip shape, etc.)
+    required: false
+  - name: region
+    dtype: text
+    doc: Names of the brain region where fibers are implanted.
+    required: true
+  - name: virus
+    dtype: text
+    doc: Description of the virus used in the experiment (name, concentration, etc.)
+    required: false
+  - name: light
+    dtype: text
+    doc: Information of the light delivered to the optic fiber tip during recording (wavelength, power, frequency, etc.)
+    required: false
+  - name: Bregma_coordinates
+    dtype: text
+    doc: Coordinates of the fiber tip. It should contains (x, y, z) in appropriate unit.
+    required: false
