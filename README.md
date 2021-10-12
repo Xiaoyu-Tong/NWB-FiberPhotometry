@@ -10,7 +10,7 @@ Single FP:
 Multi-FP:
 video with light intensity of channels
 
-This extension adds a core NWB neurodata_type called Miniscope which contains fields for the data in settings_and_notes.dat. The following code demonstrates how to use this extension to properly convert fiberphotometry experimental data into formatted NWB files, which have a standardized interface thus facilitating the data sharing in research community. 
+This extension adds a source to NWB called fiberphotometry which contains a set of new datatype that stores the data, maintains the organized structurei and specifies detailed configurations. The following code demonstrates how to use this extension to properly convert fiberphotometry experimental data into formatted NWB files, which have a standardized interface thus facilitating the data sharing in research community. 
 
 **Installation**
 
