@@ -18,7 +18,7 @@ git clone https://github.com/Xiaoyu-Tong/NWB-FiberPhotometry.git
 
 generateExtension('path/to/fiberphotometry/spec');
 
-%add 'path/to/fiberphotometry' to path
+% add 'path/to/fiberphotometry' to path
 
 **Usage**
 
