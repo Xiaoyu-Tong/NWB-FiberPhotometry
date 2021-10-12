@@ -12,6 +12,7 @@ video with light intensity of channels
 
 This extension adds a source to NWB called fiberphotometry which contains a set of new datatype that stores the data, maintains the organized structurei and specifies detailed configurations. The following code demonstrates how to use this extension to properly convert fiberphotometry experimental data into formatted NWB files, which have a standardized interface thus facilitating the data sharing in research community. 
 
+
 **Installation**
 
 git clone https://github.com/Xiaoyu-Tong/NWB-FiberPhotometry.git
@@ -19,6 +20,7 @@ git clone https://github.com/Xiaoyu-Tong/NWB-FiberPhotometry.git
 generateExtension('path/to/fiberphotometry/spec');
 
 % add 'path/to/fiberphotometry' to path
+
 
 **Usage**
 
