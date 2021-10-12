@@ -22,7 +22,7 @@ generateExtension('path/to/fiberphotometry/spec');
 % add 'path/to/fiberphotometry' to path
 
 
-**Usage**
+#**Usage**
 
 Code templates are provided (NWB_FP_CodeTemplate_DataRecipient.m and NWB_FP_CodeTemplate_DataSharer.m) with detailed annotation. The code templates cover the fundamental usage of the extension. Users do not need to write their own code except for changing variable and data names in the code templates.
 
