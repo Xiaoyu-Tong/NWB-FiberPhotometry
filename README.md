@@ -14,9 +14,9 @@ This extension adds  to the Device core NWB neurodata_type called Miniscope whic
 
 **Installation**
 
-git clone https://github.com/bendichter/ndx-miniscope.git
+git clone https://github.com/Xiaoyu-Tong/NWB-FiberPhotometry.git
 
-generateExtension('path/to/ndx-miniscope/spec');
+generateExtension('path/to/fiberphotometry/spec');
 
 **Usage**
 
